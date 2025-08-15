@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omegle‑Lite</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>Omegle‑Lite</h1>
+      <p class="muted">Anonymous 1:1 text & video chat (demo)</p>
+    </header>
+
+    <section class="controls">
+      <div class="row">
+        <label>Interests (comma‑separated)</label>
+        <input id="interests" placeholder="art, gaming, study" />
+      </div>
+      <div class="row">
+        <button id="textBtn">Text Mode</button>
+        <button id="videoBtn">Video Mode</button>
+        <button id="nextBtn" class="ghost">Next</button>
+      </div>
+      <div id="status" class="status"></div>
+    </section>
+
+    <section id="textPane" class="pane hidden">
+      <div id="messages" class="messages"></div>
+      <div class="composer">
+        <input id="msgInput" placeholder="Type a message…" maxlength="2000" />
+        <button id="sendBtn">Send</button>
+      </div>
+    </section>
+
+    <section id="videoPane" class="pane hidden">
+      <div class="videos">
+        <video id="localVideo" autoplay playsinline muted></video>
+        <video id="remoteVideo" autoplay playsinline></video>
+      </div>
+    </section>
+
+    <footer>
+      <small>Demo. No persistence. Use responsibly.</small>
+    </footer>
+  </div>
+
+  <script src="/app.js" type="module"></script>
+</body>
+</html>
